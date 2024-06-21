@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header><h1 tabindex="0" id="title">Bienvenida </h1></header>
+  <h2>Selecciona una carta, solo una es la correcta</h2>
+
+  <section class="cards">
+    <div class="cards__single">
+      <div class="cards__front">
+        <img
+          class="cards__image"
+          src="/black1.jpg"
+         
+        />
+         <!--<h1 class="cards__artist" tabindex="0">Opción 1</h1> -->
+      </div>
+      <div class="cards__back">
+        <h2 tabindex="0">Lo siento sigue participando</h2>
+        <img src="/d1.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="cards__single">
+      <div class="cards__front">
+        <img
+          class="cards__image"
+          src="/blue.png"
+          alt="Guns N' Roses Album"
+        />
+        <!--<h1 class="cards__artist" tabindex="0">Opción 2</h1> -->
+
+      </div>
+      <div class="cards__back">
+        <h2 tabindex="0">No guapota este no es 😔</h2>
+        <img src="/d2.jpg" alt="">
+        
+      </div>
+    </div>
+
+    <div class="cards__single">
+      <div class="cards__front">
+        <img
+          class="cards__image"
+          src="/yellow1.jpg"
+          alt="Arctic Monkeys album"
+        />
+         <!--<h1 class="cards__artist" tabindex="0">Opción 3</h1> -->
+        
+      </div>
+      <div class="cards__back">
+        <h2 tabindex="0">Casi, pero no</h2>
+        <img src="/d4.jpg" alt="">
+
+      </div>
+    </div>
+
+    <div class="cards__single">
+      <div class="cards__front">
+        <img
+          class="cards__image"
+          src="/red1.jpg"
+          alt="Leon Bridges album"
+        />
+         <!--<h1 class="cards__artist" tabindex="0">Opción 4</h1> -->
+        
+      </div>
+      <div class="cards__back">
+        <h2 tabindex="0">🎉 Correcto 🎊</h2>
+        <p style="font-family: Arial, Helvetica, sans-serif;">Vamos a comer pizza ?</p>
+        <img src="/d3.jpg" alt="" style="height: 270px;">
+        
+      </div>
+    </div>
+  </section>
+  <script>
+    const cards = document.querySelectorAll(".cards__single");
+
+    function flipCard() {
+      this.classList.toggle("flip");
+    }
+    cards.forEach((card) => card.addEventListener("click", flipCard));
+  </script>
+</body>
+</html>
